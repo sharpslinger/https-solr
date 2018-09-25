@@ -1,0 +1,13 @@
+version: '3'
+services:
+  https-solr:
+    build: .
+    image: sharpslinger/https-solr
+    ports:
+      - "8983:8983"
+    volumes:
+      - ./solrdata:/solrhome
+    environment:
+      SOLR_HOME: /solrhome
+      INIT_SOLR_HOME: "yes"      
+  
