@@ -4,7 +4,10 @@ This creates a docker container with a security certificate, since the Sitecore 
 ### Pull the image
 `docker run sharpslinger/https-solr:latest`
 
-`docker ps -a` (get the container ID or a unique prefix; in the case of 0683b865494b you can shorten to 0683)
+Alternatively, if modifying: do a `docker-compose up -d`
+
+Get the container ID from the running container, or a unique prefix:
+`docker ps -a` (in the case of 0683b865494b you can shorten to 0683)
 
 ### Export the generated certificate
 if running Windows/Hyper-V containers the container has to be stopped
