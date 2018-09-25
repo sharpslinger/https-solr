@@ -1,10 +1,8 @@
 # Solr for Sitecore
 This creates a docker container with a security certificate, since the Sitecore Installation Framework requires an https connection to Solr.
 
-### Pull the image
-`docker run sharpslinger/https-solr:latest`
-
-Alternatively, if modifying: do a `docker-compose up -d`
+### Build the image
+`docker-compose up -d`
 
 Get the container ID from the running container, or a unique prefix:
 `docker ps -a` (in the case of 0683b865494b you can shorten to 0683)
@@ -22,6 +20,10 @@ Add a `127.0.0.1 solr` to your hosts file
 
 ### Run it!
 Restart the container and navigate to https://solr:8983/solr
+
+Easiest way is to use docker-compose to reset the container:
+```docker-compose down```
+```docker-compose up -d```
 
 ### SECURITY CONSIDERATIONS
 You probably want to go into solrinitcfg and the Dockerfile and change the passwords to something other than "secret" since the resulting generated certificate is being installed on your machine.
