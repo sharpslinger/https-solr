@@ -21,4 +21,4 @@ Add a `127.0.0.1 solr` to your hosts file
 Restart the container and navigate to https://solr:8983/solr
 
 ### SECURITY CONSIDERATIONS
-You probably want to go into solrinitcfg and the Dockerfile and change the passwords to something other than "secret" since the resulting generated certification is being installed on your machine.
+You probably want to go into solrinitcfg and the Dockerfile and change the passwords to something other than "secret" since the resulting generated certificate is being installed on your machine.
