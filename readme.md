@@ -24,6 +24,3 @@ Restart the container and navigate to https://solr:8983/solr
 Easiest way is to use docker-compose to reset the container:
 ```docker-compose down```
 ```docker-compose up -d```
-
-### SECURITY CONSIDERATIONS
-You probably want to go into solrinitcfg and the Dockerfile and change the passwords to something other than "secret" since the resulting generated certificate is being installed on your machine.
